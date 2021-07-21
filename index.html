@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Page Title</title>
+  </head>
+  <style>
+    .button {
+      background-image: linear-gradient(to right, #7f00ff, #e100ff);
+      padding: 10px 45px;
+      display: inline-block;
+      margin-top: 100px;
+      margin-top: 100px;
+      color: #fff;
+      border-radius: 35px;
+      text-decoration: none;
+      transition: 0.5s all;
+      position: relative;
+      z-index: 1;
+    }
+    .button::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background-image: linear-gradient(to left, #7f00ff, #e100ff);
+      z-index: -1;
+      transition: opacity 0.5s linear;
+      opacity: 0;
+      border-radius: 35px;
+    }
+    .button:hover::before {
+      opacity: 1;
+    }
+  </style>
+  <body>
+    <a href="" class="button">Button</a>
+  </body>
+</html>
